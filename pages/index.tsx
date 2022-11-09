@@ -4,9 +4,9 @@ export default function Home() {
       name="dasdasd"
       surname="dasda"
     />
-  );
+  )
 }
 
-const ComponentTest = (props: any) => {
-  return <div>Hello</div>;
-};
+const ComponentTest = (props: { name: string; surname: string }) => {
+  return <div>{props.name}</div>
+}
