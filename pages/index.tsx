@@ -1,5 +1,12 @@
 export default function Home() {
   return (
-    <p>Hello Admin Panel!</p>
-  )
+    <ComponentTest
+      name="dasdasd"
+      surname="dasda"
+    />
+  );
 }
+
+const ComponentTest = (props: any) => {
+  return <div>Hello</div>;
+};
