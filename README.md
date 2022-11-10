@@ -1,3 +1,5 @@
 ```bash
-1. yarn prepare # Для установки Husky
+yarn install
+yarn dev # для разработки
+yarn build # для просмотра билда
 ```
