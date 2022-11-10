@@ -1,12 +1,13 @@
-export default function Home() {
-  return (
-    <ComponentTest
-      name="dasdasd"
-      surname="dasda"
-    />
-  )
-}
+import dynamic from 'next/dynamic'
 
-const ComponentTest = (props: { name: string; surname: string }) => {
-  return <div>{props.name}</div>
+/**
+ * Note: пример страницы, которая не будет доступна поисковикам
+ * Используется такой подход исключительно если нет требований к доступности сайта
+ */
+const LazyLoadedHomePage = dynamic(() => import('@/components/pages/home'), {
+  ssr: false
+})
+
+export default function Home() {
+  return <LazyLoadedHomePage />
 }
